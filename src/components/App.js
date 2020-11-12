@@ -10,11 +10,14 @@ class App extends Component {
   }
   render() {
     return (
-      <div className="main">
-        <div className="pokedex">
-          <Pokelist pokedex={pokedex} />
-        </div>
-      </div>
+      <>
+        <header className="header"></header>
+        <main className="main">
+          <div className="pokedex">
+            <Pokelist pokedex={pokedex} />
+          </div>
+        </main>
+      </>
     );
   }
 }

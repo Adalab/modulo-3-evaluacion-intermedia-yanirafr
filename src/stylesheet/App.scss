@@ -1,0 +1,69 @@
+* {
+  box-sizing: border-box;
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+.header {
+  width: 100%;
+  background-image: url(../images/Rotomdex.png);
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  height: 200px;
+  background-color: #e94942;
+}
+.main {
+  background-color: #e94942;
+  padding: 50px 0;
+}
+
+.pokedex {
+  background-color: #7dd6f9;
+  width: 80%;
+  margin: auto;
+  border-radius: 40px;
+}
+
+.pokemon {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: space-around;
+  &__card {
+    background-color: white;
+    width: 250px;
+    height: 300px;
+    margin: 50px 20px;
+    border-radius: 20px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    box-shadow: 2px 5px 10px 5px #007cc8;
+    cursor: pointer;
+    &:hover {
+      transform: scale(1.2);
+    }
+    &__img {
+      width: 200px;
+    }
+    &__name {
+      font-family: "Goldman", cursive;
+      text-transform: capitalize;
+      padding: 5px 0;
+    }
+    &__types {
+      display: flex;
+    }
+    &__type {
+      background-color: grey;
+      margin: 5px;
+      border-radius: 5px;
+      padding: 2px 5px;
+      text-transform: uppercase;
+      color: white;
+      font-size: 10px;
+    }
+  }
+}
