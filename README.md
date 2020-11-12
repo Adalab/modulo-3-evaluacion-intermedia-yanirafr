@@ -1,4 +1,4 @@
-# Pokedex
+# Pokédex
 
 ## Yanira Fernández Requena
 
