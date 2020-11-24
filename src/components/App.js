@@ -1,14 +1,17 @@
-import React, { Component } from "react";
 import "../stylesheet/App.scss";
-import pokedex from "../data/pokedex.json";
+import pokedexData from "../data/pokedex.json";
 import Pokelist from "./Pokelist";
+import { useState } from "react";
 
 const App = () => {
+  const [pokedex] = useState(pokedexData);
+
   return (
     <>
-      <header className="header"></header>
+      <header className="header">
+        <h1 className="header__title">My Pokédex</h1>
+      </header>
       <main className="main">
-        <h1 className="main__title">Mi lista de Pokémon</h1>
         <div className="main__pokedex">
           <Pokelist pokedex={pokedex} />
         </div>

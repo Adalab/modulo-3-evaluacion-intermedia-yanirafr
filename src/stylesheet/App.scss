@@ -12,12 +12,9 @@
   background-repeat: no-repeat;
   height: 200px;
   background-color: #e94942;
-}
-.main {
-  background-color: #e94942;
-  padding: 30px 0;
   &__title {
     width: 80%;
+    transform: translateY(199px);
     text-align: center;
     background-color: white;
     margin: auto;
@@ -28,15 +25,26 @@
     border: 2px solid black;
     box-shadow: 0 0 0 8px #a62e2d;
     @media (min-width: 768px) {
-      width: 500px;
+      // width: 500px;
+      padding: 15px;
       font-size: 45px;
+      transform: translateY(208px);
     }
   }
+}
+.main {
+  background-color: #e94942;
+  padding: 60px 0;
   &__pokedex {
     background-color: #7dd6f9;
     width: 80%;
     margin: auto;
     border-radius: 40px;
+    border: 2px solid black;
+    box-shadow: 0 0 0 8px #a62e2d;
+    @media (min-width: 768px) {
+      margin-top: 45px;
+    }
   }
 }
 
