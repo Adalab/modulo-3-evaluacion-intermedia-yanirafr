@@ -2,6 +2,10 @@ import Pokemon from "./Pokemon";
 import PropTypes from "prop-types";
 
 const Pokelist = (props) => {
+  const handleClick = (ev) => {
+    props.sendClick(ev.currentTarget.id);
+  };
+
   const pokemon = props.pokedex.map((poke) => {
     return (
       <li
@@ -9,6 +13,7 @@ const Pokelist = (props) => {
         key={poke.id}
         id={poke.id}
         title={poke.name}
+        onClick={handleClick}
       >
         <img src={poke.url} alt={poke.name} className="pokemon__card__img" />
         <h2 className="pokemon__card__name">{poke.name}</h2>
