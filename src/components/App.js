@@ -18,7 +18,8 @@ const App = () => {
     });
 
     if (teamAdd) {
-      if (team.length < 6) setTeam([...team, teamAdd.url]);
+      if (team.length < 6)
+        setTeam([...team, { url: teamAdd.url, name: teamAdd.name }]);
       localStorage.setItem("pokemon-team", JSON.stringify(team));
     }
   };
@@ -31,6 +32,7 @@ const App = () => {
     const removeIndex = team.indexOf(teamRemove);
     team.splice(removeIndex, 1);
     localStorage.setItem("pokemon-team", JSON.stringify(team));
+    setTeam([...team]);
   };
 
   return (
