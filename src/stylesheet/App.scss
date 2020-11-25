@@ -96,6 +96,7 @@
     }
   }
 }
+
 .poke-team {
   display: flex;
   justify-content: center;
@@ -105,14 +106,19 @@
   border-top: 2px solid black;
   border-bottom: 2px solid black;
   &__list {
+    width: 250px;
     display: flex;
     flex-wrap: wrap;
+    justify-content: flex-end;
+    @media (min-width: 768px) {
+      width: unset;
+    }
   }
   &__title {
     font-family: "Goldman", cursive;
     font-size: 12px;
     margin: 0 5px 0 20px;
-    width: 110px;
+    width: 100px;
     @media (min-width: 768px) {
       margin-right: 30px;
       font-size: 26px;
@@ -120,7 +126,7 @@
     }
   }
   &__image {
-    height: 65px;
+    height: 60px;
     cursor: pointer;
     &:hover {
       transform: translateY(-5px);
